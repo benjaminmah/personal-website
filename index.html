@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+    <html lang="en" class="notranslate" translate="no">
+        <head>
+            <title>Benjamin Mah</title>
+            <link rel="shortcut icon" type="image/png" href="calcifer.png">
+
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--=============== ICONS ===============-->
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+            <!--=============== CIRCLE STUFF ===============-->
+            <script src="circletype.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+            <!--=============== NAV STUFF ===============-->
+            <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+
+            <!--=============== CSS ===============-->
+            <link rel="stylesheet" href="styles.css">
+
+            <!--=============== FONTS ===============-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+            <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+            <!--=============== PREVENTING AUTOTRANSLATE ===============-->
+            <meta name="google" content="notranslate" />
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        </head>
+        <body>
+            <div class="mobile-message">
+                <p>Oops! Looks like you're on mobile or on a small screen; unfortunately, this website isn't mobile-friendly yet. You can contact me at <a href="mailto: benjaminmah.bm@gmail.com" >benjaminmah.bm@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/benjaminmahh/" target="_blank">LinkedIn</a> and <a href="https://github.com/benjaminmah" target="_blank">Github</a>. Thanks for stopping by and don't hesitate to visit this website on desktop!</p>
+            </div>
+            <div class="content-to-hide-on-mobile">
+            <header>
+                <div>
+                    <button class="header__button nav-btn-js" type="button"></button>
+                    <nav class="header__nav nav-js" data-active="false">
+                        <ul class="header__menu">
+                            <li class="header__menu-item"><a href="#">home</a></li>
+                            <li class="header__menu-item"><a href="#about">about</a></li>
+                            <li class="header__menu-item"><a href="#experience">experience</a></li>
+                            <li class="header__menu-item"><a href="#projects">projects</a></li>
+                            <li class="header__menu-item"><a href="#contact">contact</a></li>
+                            <li class="header__menu-item"><a href="Benjamin_Mah_Resume.pdf" target="_blank">resume</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+    
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const revealerNav = window.revealer({
+                        revealElementSelector: ".nav-js",
+                        options: {
+                            anchorSelector: ".nav-btn-js",
+                        },
+                    });
+    
+                    const actionBtn = document.querySelector(".nav-btn-js");
+                    actionBtn.addEventListener("click", () => {
+                        if (!revealerNav.isRevealed()) {
+                            revealerNav.reveal();
+                            actionBtn.setAttribute("data-open", true);
+                        } else {
+                            revealerNav.hide();
+                            actionBtn.setAttribute("data-open", false);
+                        }
+                    });
+                    const navBtn = document.querySelector(".header__menu");
+                    navBtn.addEventListener("click", () => {
+                        if (revealerNav.isRevealed()) {
+                            revealerNav.hide();
+                            actionBtn.setAttribute("data-open", false);
+                        }
+                    });
+                });
+            </script>
+            <!--=============== lOADING ICON ===============-->
+            <div class="loader"></div>
+
+
+
+
+            <!-- CURSOR HOVER --> 
+            <!--
+            <div class="cursor">
+                <h1 class="linkedin">Linkedin!</h1>
+                <h2 class="website">Website!</h2>
+                <h3 class="more">Learn<br>More!</h2>
+            </div>
+            <div class="cursor-follower"></div>
+            --> 
+            <!--=============== MAIN AREA ===============-->
+            <div class="main-background" style ="position: relative;">
+                <!--=============== VIDEO BACKGROUND ===============-->
+                <div class="video-container">
+                    <video autoplay loop muted plays-inline class="bg-video">
+                        <source src="ghibli.mp4" type="video/mp4">
+                    </video>
+                    <img class = "bg-img" src="https://wallpaperaccess.com/full/650768.jpg" alt="">
+                </div>
+                
+
+
+                <nav class="navbar-container">
+                    <nav class="navbar-container2">
+                        <nav class="navbar">
+                            <a href="#" class="nav-branding">Benjamin Mah</a>
+                            <ul class="nav-menu">
+                                <li class="nav-link"><a href="#about" class="nav-selection">a·bout</a></li>
+                                <li class="nav-link"><a href="#experience" class="nav-selection">ex·pe·ri·ence</a></li>
+                                <li class="nav-link"><a href="#projects" class="nav-selection">pro·jects</a></li>
+                                <li class="nav-link"><a href="#contact" class="nav-selection">con·tact</a></li>
+                                <li class="nav-link"><a href="Benjamin_Mah_Resume.pdf" class="nav-selection" target="_blank">re·su·me</a></li>
+                            </ul>
+                        </nav>
+                    </nav>
+                </nav>
+                
+                <div class="home">
+                    <div class="home-container">
+                        <div class="home-container2">
+                            <h1 id="home-title">
+                                ben·ja·min <br>
+                                <span class="pronunciation">/ben-juh-min/</span>
+                                <span class="noun">(noun)</span> <br>
+                                <span class="auto-type"></span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container" id="scroll-up">
+                <a href="Benjamin_Mah_Resume.pdf" target="_blank">
+                    <div class="circle">
+                    <p id="text">• view resume • view resume • view resume • view resume </p>
+                    </div>
+                </a>
+            </div>
+            <div class="static-curved">
+                <div class="curved"></div>
+            </div>
+            <!-- OVERLAY -->
+            <div class="static"></div>
+
+
+
+ 
+
+
+            <div class="about" id="about" style ="position: relative;">
+                <div class="about-container">
+                    <div class="about-text-container">
+                        <div class="about-title">
+                            <p class="about1">ABOUT</p>
+                        </div>
+                        <div class="me-title">
+                            <p class="about2">ME</p>
+                        </div>
+                        <div class="about-text">
+                            <p class="about-first">I'm a Machine Intelligence Engineering student at the University of Toronto who is passionate about harnessing the potential of software development and machine learning to create impactful solutions.</p>
+                            <br><p class="about-second">When I'm not glued to my keyboard, I'm indulging in some hobbies like collecting vinyl records, playing the piano, and setting off smoke alarms as I attempt to improve my cooking skills.</p>
+                        
+                        </div>
+                        <div class="audio-container">
+                            <p class="about-second"><br>Click the line to hear what I'm listening to right now.</p>
+                            <p class="about-third"><br>Any Way You Want Me - BROCKHAMPTON</p>
+                            <canvas></canvas>
+                        </div>
+                        <audio src="brockhampton.mp3" id="audio"></audio>
+                        <script>
+                            const c = document.querySelector("canvas");
+                            const audio = document.querySelector("#audio");
+
+                            audio.volume = 0.4;
+                            
+                            let opt = {
+                                width: c.offsetWidth,
+                                height: c.offsetHeight,
+                                midY: c.offsetHeight / 2,
+                                points: 80,
+                                stretch: 10,
+                                sinHeight: 0,
+                                speed: -0.1,
+                                strokeColor: "white",
+                                strokeWidth: 1.5,
+                                power: false,
+                            };
+
+                            c.width = opt.width * 2;
+                            c.height = opt.height * 2;
+                            c.style.width = opt.width;
+                            c.style.height = opt.height;
+
+                            const ctx = c.getContext("2d");
+                            ctx.scale(2, 2);
+                            ctx.strokeStyle = opt.strokeColor;
+                            ctx.lineWidth = opt.strokeWidth;
+                            ctx.lineCap = "round";
+                            ctx.lineJoin = "round";
+
+                            let time = 0;
+
+                            const render = () => {
+                                window.requestAnimationFrame(render);
+                                ctx.clearRect(0, 0, opt.width, opt.height);
+                                time += 1;
+                                ctx.beginPath();
+                                let increment = 0;
+
+                                for(i = 0; i <= opt.points; i++) {
+                                    if(i < opt.points / 2) {
+                                        increment += 0.1;
+                                    } else {
+                                        increment += -0.1;
+                                    }
+
+                                    const x = (opt.width / opt.points) * i;
+                                    const y = opt.midY + Math.sin(time * opt.speed + i / opt.stretch) * opt.sinHeight * increment;
+                                    ctx.lineTo(x, y);
+                                }
+
+                                ctx.stroke();
+                            };
+
+                            render();
+
+                            c.addEventListener("click", () => {
+                                opt.power = !opt.power;
+
+                                if(opt.power) {
+                                    audio.play();
+                                    TweenMax.to(opt, 1, {
+                                        sinHeight: 4,
+                                        stretch: 5,
+                                        ease: Power2.easeInOut,
+                                    });
+                                } else {
+                                    audio.pause();
+                                    TweenMax.to(opt, 1, {
+                                        sinHeight: 0,
+                                        stretch: 10,
+                                        ease: Power3.easeOut,
+                                    });
+                                }
+                            })
+
+
+
+                        </script>
+                    </div>
+                    <div class="about-image">
+                        <div class="portfolio-thumb">
+                            <a href="https://www.linkedin.com/in/benjaminmahh/" target="_blank">
+                                <img src="ben.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="experience" id="experience">
+                <div class="experience-container">
+                    <div class="experience-text-container">
+                        <div class="experience-title">
+                            <p class="experience1">EXPERIENCE</p>
+                        </div>
+
+                        <div class="timeline-container" id="timeline-1">
+                            <div class="timeline">
+                                <div class="timeline-item" data-text="May 2023 - Present">
+                                    <div class="timeline__content">
+                                        <a href="https://www.rbc.com/" target="_blank">
+                                        <img class="timeline__img" src="https://news.coinsquare.com/wp-content/uploads/2018/03/rbc-1200x600.jpg" />
+                                        </a>
+                                        <h2 class="timeline__content-title">Machine Learning Engineer Intern at RBC</h2>
+                                        <p class="timeline__content-desc">Innovation Labs, Generative AI Team (Technology & Operations Division)</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" data-text="Sept 2022 - April 2023">
+                                    <div class="timeline__content">
+                                        <a href="https://www.utat.ca/" target="_blank">
+                                        <img class="timeline__img" src="https://images.squarespace-cdn.com/content/v1/62b5ed0320d8445dcc340e0d/630de44b-0751-4cc2-97b8-2ea4d2ee4a36/UTATLogoWebIcon.png" />
+                                        </a>
+                                        <h2 class="timeline__content-title">Automation Software Engineer at UTAT</h2>
+                                        <p class="timeline__content-desc">Responsible for developing and constructing an electric radio-controlled aircraft, an autonomous landing
+                                            aircraft, and a payload ground rover for the SAE International Aerospace Competition in Texas using Python, Mavlink, and ROS.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" data-text="Mar 2022 - April 2023">
+                                    <div class="timeline__content">
+                                        <a href="https://hatchery.engineering.utoronto.ca/" target="_blank">
+                                        <img class="timeline__img" src="https://media.discordapp.net/attachments/891024678947258478/1001241937526919218/logo_8.png?width=676&height=676" />
+                                        </a>
+                                        <h2 class="timeline__content-title">Co-Founder, CTO at FlipDoor</h2>
+                                        <p class="timeline__content-desc">Co-Founder of FlipDoor, a startup focused on implementing a mobile application using AI algorithms to
+                                            improve pairing with landlords and tenants through the UofT Hatchery startup incubator.
+                                            </p>
+                                    </div>
+                                </div>
+
+
+                                <!--
+                                <div class="timeline-item " data-text="May 2022 - Aug 2022">
+                                    <div class="timeline__content">
+                                        <a href="https://www.dataglacier.org/" target="_blank">
+                                        <img class="timeline__img" src="https://static.wixstatic.com/media/0210e0_4645ed6fa69940d9b0a132d02afdbc36~mv2.png/v1/fit/w_2500,h_1330,al_c/0210e0_4645ed6fa69940d9b0a132d02afdbc36~mv2.png" />
+                                        </a>
+                                        <h2 class="timeline__content-title">Data Science Intern at Data Glacier</h2>
+                                        <p class="timeline__content-desc">Performed exploratory data analysis and  deploy a preliminary machine learning model with large CSV data sets containing taxi cab transactions and presented
+                                            using a data intake report using the Python’s Pandas library and Matplotlib.</p>
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+
+                        <script>(function($) {
+                            $.fn.timeline = function() {
+                              var selectors = {
+                                id: $(this),
+                                item: $(this).find(".timeline-item"),
+                                activeClass: "timeline-item--active",
+                                img: ".timeline__img"
+                              };
+                              selectors.item.eq(0).addClass(selectors.activeClass);
+
+                              /* new stuff */
+                              selectors.item.eq(1).addClass(selectors.activeClass);
+                              selectors.item.eq(2).addClass(selectors.activeClass);
+                              selectors.item.eq(3).addClass(selectors.activeClass);
+
+                              /*
+                              var itemLength = selectors.item.length;
+                              $(window).scroll(function() {
+                                var max, min;
+                                var pos = $(this).scrollTop();
+                                selectors.item.each(function(i) {
+                                  min = $(this).offset().top;
+                                  max = $(this).height() + $(this).offset().top;
+                                  var that = $(this);
+                                  if (i == itemLength - 2 && pos > min + $(this).height()/2) {
+                                    selectors.item.removeClass(selectors.activeClass);
+                                    selectors.item.last().addClass(selectors.activeClass);
+                                  } else if (pos <= max - 30 && pos >= min) {
+                                    selectors.item.removeClass(selectors.activeClass);
+                                    $(this).addClass(selectors.activeClass);
+                                  }
+                                });
+                              });
+                              */
+                            };
+                          })(jQuery);
+                          
+                          $("#timeline-1").timeline();
+                          </script>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="projects" id="projects">
+                <div class="projects-container">
+                    <div class="projects-title">
+                        <p class="projects1">PROJECTS</p>
+                    </div>
+
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <div class="carousel-box">
+                                <a href="https://github.com/benjaminmah/dubu-chatbot" target="_blank" style="text-decoration: none;"  ><div class="title">Dubu Chatbot</div><i class="fab fa-github" id="github"></i></a>
+                                <div class="num">01</div>
+                                <img src="assets/img-01.png" />
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-box">
+                                <a href="https://github.com/benjaminmah/mood-palette" target="_blank" style="text-decoration: none;"  ><div class="title">MoodPalette</div><i class="fab fa-github" id="github"></i></a>
+                                <div class="num">02</div>
+                                <img src="assets/img-02.png" />
+                            </div>
+                        </div>
+                    
+                        <div class="carousel-item">
+                            <div class="carousel-box">
+                                <a href="https://github.com/benjaminmah/smart-trailer" target="_blank" style="text-decoration: none;"  ><div class="title">Smart Farming Trailer</div><i class="fab fa-github" id="github"></i></a>
+                                <div class="num">03</div>
+                                <img src="assets/img-03.jpg" />
+                            </div>
+                        </div>
+                    
+                        <div class="carousel-item">
+                            <div class="carousel-box">
+                                <a href="https://github.com/benjaminmah/chattera" target="_blank" style="text-decoration: none;"  ><div class="title">Chattera</div><i class="fab fa-github" id="github"></i></a>
+                                <div class="num">04</div>
+                                <img
+                                    src="assets/img-04.png"
+                                />
+                            </div>
+                        </div>
+                    
+
+                    </div>
+
+                    <script>
+/*--------------------
+Vars
+--------------------*/
+let progress = 0
+let startX = 0
+let active = 0
+let isDown = false
+
+/*--------------------
+Get Z
+--------------------*/
+const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+
+/*--------------------
+Items
+--------------------*/
+const $items = document.querySelectorAll('.carousel-item')
+const $cursors = document.querySelectorAll('.cursor')
+
+const displayItems = (item, index, active) => {
+  const zIndex = getZindex([...$items], active)[index]
+  item.style.setProperty('--zIndex', zIndex)
+  item.style.setProperty('--active', (index-active)/$items.length)
+}
+
+/*--------------------
+Animate
+--------------------*/
+const animate = () => {
+  progress = Math.max(0, Math.min(progress, 100))
+  active = Math.floor(progress/100*($items.length-1))
+  
+  $items.forEach((item, index) => displayItems(item, index, active))
+}
+animate()
+
+/*--------------------
+Click on Items
+--------------------*/
+$items.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    progress = (i/$items.length) * 100 + 25
+    animate()
+  })
+})
+
+                    </script>
+
+                    
+                </div>
+
+                <!--
+                <div class="projects-container">
+                    <div class="projects-text-container">
+                        <div class="projects-title">
+                            <p class="projects1">PROJECTS</p>
+                        </div>
+                        <div class="container2">
+                            <nav class="menu2">
+                              <div class="menu2__item">
+                                <div class="menu2__item-image_wrapper">
+                                  <div class="menu2__item-image_inner">
+                                    <img class="menu2__item-image" src="assets/img_01.png" />
+                                  </div>
+                                </div>
+                                <span class="menu2__item-text"
+                                  ><a href="https://devpost.com/software/pat-productivity-algorithm-tool" target="_blank" style="text-decoration: none;"  ><span class="menu2__item-innertext">01 PAT.ai</span></span
+                                ></a>
+                              </div>
+                              <div class="menu2__item">
+                                <div class="menu2__item-image_wrapper">
+                                  <div class="menu2__item-image_inner">
+                                    <img class="menu2__item-image" src="assets/img_02.png" />
+                                  </div>
+                                </div>
+                                <span class="menu2__item-text"
+                                  ><a href="https://github.com/benjaminmah/benibot" target="_blank"><span class="menu2__item-innertext">02 Benibot</span></span
+                                ></a>
+                              </div>
+                              <div class="menu2__item">
+                                <div class="menu2__item-image_wrapper">
+                                  <div class="menu2__item-image_inner">
+                                    <img class="menu2__item-image" src="assets/img_03.png" />
+                                  </div>
+                                </div>
+                                <span class="menu2__item-text"
+                                  ><a href="https://chattera.netlify.app/" target="_blank"><span class="menu2__item-innertext">03 Chattera</span></span
+                                ></a>
+                              </div>
+                              <div class="menu2__item">
+                                <div class="menu2__item-image_wrapper">
+                                  <div class="menu2__item-image_inner">
+                                    <img class="menu2__item-image" src="assets/img_04.png" />
+                                  </div>
+                                </div>
+                                <span class="menu2__item-text"
+                                  ><a href="https://www.benjaminmah.com" target="_blank"><span class="menu2__item-innertext">04 Personal Website</span></span
+                                ></a>
+                              </div>
+                            </nav>
+                          </div>
+
+                          <script>
+                            const { gsap } = window;
+
+                            gsap
+                            .timeline()
+                            .set(".menu2", { autoAlpha: 1 })
+                            .from(".menu2__item-innertext", {
+                                delay: 1,
+                                duration: 0.85,
+                                xPercent: 25,
+                                yPercent: 125,
+                                stagger: 0.095,
+                                skewY: gsap.utils.wrap([-8, 8]),
+                                ease: "expo.out",
+                            })
+                            .set(".menu2", { pointerEvents: "all" });
+
+                            gsap.defaults({
+                            duration: 0.55,
+                            ease: "expo.out",
+                            });
+
+                            const menu2Items = document.querySelectorAll(".menu2__item");
+
+                            menu2Items.forEach((item) => {
+                            const imageWrapper = item.querySelector(".menu2__item-image_wrapper");
+                            const imageWrapperBounds = imageWrapper.getBoundingClientRect();
+                            let itemBounds = item.getBoundingClientRect();
+
+                            const onMouseEnter = () => {
+                                gsap.set(imageWrapper, {
+                                scale: 0.8,
+                                xPercent: 25,
+                                yPercent: 50,
+                                rotation: -15,
+                                });
+                                gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+                            };
+
+                            const onMouseLeave = () => {
+                                gsap.to(imageWrapper, {
+                                opacity: 0,
+                                yPercent: -50,
+                                xPercent: 25,
+                                scale: 0.8,
+                                rotation: -15,
+                                });
+                            };
+
+                            const onMouseMove = ({ x, y }) => {
+                                let yOffset = itemBounds.top / imageWrapperBounds.height;
+                                yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
+                                gsap.to(imageWrapper, {
+                                duration: 1.25,
+                                x: Math.abs(x - itemBounds.left) - imageWrapperBounds.width / 1.55,
+                                y: Math.abs(y - itemBounds.top) - imageWrapperBounds.height / 2 - yOffset,
+                                });
+                            };
+
+                            item.addEventListener("mouseenter", onMouseEnter);
+                            item.addEventListener("mouseleave", onMouseLeave);
+
+
+                            window.addEventListener("resize", () => {
+                                itemBounds = item.getBoundingClientRect();
+                            });
+                            });
+
+                          </script>
+                        
+                    </div>
+                </div>>
+                -->
+            </div>
+
+
+            
+            <div class="contact" id="contact">
+                <div class="contact-container">
+                    <div class="contact-text-container">
+                        <div class="contact-title">
+                            <p class="contact1">CONTACT</p>
+                        </div>
+                        <div class="contact-section">
+                            <div class="button-container">
+                                <a href="mailto: benjaminmah.bm@gmail.com" class="button" cursor-class="overlay">
+                                    <span class="button-text"> EMAIL ME </span>
+                            
+                                    <span class="button-text foreground-text"> EMAIL ME </span>
+                                  </a>
+                            </div>
+                            <div class="button-container">
+                                <a href="Benjamin_Mah_Resume.pdf" target="_blank" class="button" cursor-class="overlay">
+                                    <span class="button-text"> VIEW RESUME </span>
+                            
+                                    <span class="button-text foreground-text"> VIEW RESUME </span>
+                                  </a>
+                            </div>
+
+
+                    
+                              <div class="social-media">
+                                <h3>FIND ME ON</h3>
+                                <span><a href="https://www.linkedin.com/in/benjaminmahh/" class="linkedin-button" target="_blank">LINKEDIN</a> — <a href="https://github.com/benjaminmah" class="github-button" target="_blank">GITHUB</a><br><br>benjaminmah.bm@gmail.com</span>
+                              </div>
+                            </div>
+
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-to-hide-on-mobile">
+            <div class="footer">
+
+                <div class="footer-content">
+                    <p>Made with ❤️ from Toronto, Canada </p>
+                </div>
+                <div class="copyright">
+                    <span>Last updated on June 23, 2023.</span>
+                    <span>© Benjamin Mah. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+
+            <!--=============== MAIN JS ===============-->
+            <script src="main.js"></script>
+
+            <!-- SELF TYPING TEXT-->
+            <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["Hardworking engineering student.", "Vinyl enthusiast and music lover.", "Future travel aficionado."],
+                    typeSpeed: 50,
+                    backSpeed: 50,
+                    loop: true
+                })
+            </script>
+
+            <script>
+    
+                window.addEventListener("load", () => {
+                    document.querySelector(".loader").classList.add("loader--hidden")
+                })
+            </script>
+
+
+            <script>
+    
+                window.addEventListener("load", () => {
+                    document.querySelector(".loader").classList.add("loader--hidden")
+                })
+            </script>
+
+
+            <script>
+                const text = document.getElementById('text')
+                const rotate = new CircleType(text).radius(50)
+
+                window.addEventListener('scroll', function(){
+                text.style.transform = 'rotate(' + (window.scrollY * 0.15) + 'deg)'
+                })
+            </script>
+
+            <script>
+                const scrollUp = document.querySelector(".circle");
+                window.addEventListener('scroll', () => {
+                    if(window.pageYOffset > 240) {
+                        scrollUp.classList.add("active")
+                    } else{
+                        scrollUp.classList.remove("active")
+                    }
+                })
+            </script>
+
+
+
+            <script>
+                var cursor = $(".cursor"),
+                    follower = $(".cursor-follower");
+
+                var posX = 0,
+                    posY = 0,
+                    mouseX = 0,
+                    mouseY = 0;
+
+                TweenMax.to({}, 0.016, {
+                    repeat: -1,
+                    onRepeat: function() {
+                        posX += (mouseX - posX) / 9;
+                        posY += (mouseY - posY) / 9;
+
+                        TweenMax.set(follower, {
+                            css: {
+                                left: posX - 20,
+                                top: posY - 20
+                            }
+                        });
+
+                        TweenMax.set(cursor, {
+                            css: {
+                                left: mouseX,
+                                top: mouseY
+                            }
+                        });
+                    }
+                });
+
+                $(document).on("mousemove", function(e) {
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
+                });
+
+                $(".about-image img").on("mouseenter", function() {
+                    cursor.addClass("active");
+                    follower.addClass("active");
+                });
+
+                $(".about-image img").on("mouseleave", function() {
+                    cursor.removeClass("active");
+                    follower.removeClass("active");
+                });
+
+                $(".timeline__img").on("mouseenter", function() {
+                    cursor.addClass("active2");
+                    follower.addClass("active");
+                });
+
+                $(".timeline__img").on("mouseleave", function() {
+                    cursor.removeClass("active2");
+                    follower.removeClass("active");
+                });
+
+                $(".menu2__item-text a").on("mouseenter", function() {
+                    cursor.addClass("active3");
+                    follower.addClass("active");
+                });
+
+                $(".menu2__item-text a").on("mouseleave", function() {
+                    cursor.removeClass("active3");
+                    follower.removeClass("active");
+                });
+            </script>
+
+            </div>
+        </body>
+    </html>
+</html>
