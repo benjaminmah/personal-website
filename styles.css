@@ -1407,6 +1407,10 @@ canvas{
         font-size: 20px;
     }
 
+    .timeline__content-company{
+        font-size: 18px;
+    }
+
     .timeline__content-desc{
         font-size: 17px;
     }
