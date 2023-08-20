@@ -716,7 +716,7 @@ canvas{
  .timeline__content-title {
 	 font-weight: normal;
 	 font-size: 35px;
-	 margin: -10px 0 0 0;
+	 margin: -5px 0 0 0;
 	 transition: 0.4s;
 	 padding: 0 10px;
      padding-top: 65px;
@@ -725,6 +725,21 @@ canvas{
 	 color: #fff;
      text-align: center;
 }
+
+ .timeline__content-company {
+    font-weight: normal;
+    font-size: 28px;
+    margin: -75px 0 15px 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    padding-top: 65px;
+    box-sizing: border-box;
+    font-family: 'Sregs Serif Display';
+    color: #fdffe5;
+    text-align: center;
+	text-shadow: 1px 1px 5px #b7b7b7;
+}
+
  .timeline__content-desc {
 	 margin: 0;
 	 font-size: 20px;
