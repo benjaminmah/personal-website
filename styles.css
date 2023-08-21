@@ -735,10 +735,10 @@ canvas{
     padding-top: 65px;
     box-sizing: border-box;
     font-family: 'Sregs Serif Display';
-    color: #fdffe5;
+    color: rgb(236, 236, 236);
     text-align: center;
-	text-shadow: 1px 1px 5px #b7b7b7;
 }
+
 
  .timeline__content-desc {
 	 margin: 0;
