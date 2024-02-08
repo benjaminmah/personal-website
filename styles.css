@@ -656,16 +656,20 @@ canvas{
 }
 
 .portfolio-thumb {
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    width: 360px; /* Ensure this matches the height for a square */
+    height: 360px; /* Ensure this matches the width for a square */
+    overflow: hidden; /* Ensures anything outside the square is clipped */
+    border-radius: 50%; /* Creates the circular shape */
+    display: flex; /* Centers the image within the container */
 }
 
 .portfolio-thumb img {
-    max-width: 360px;
-    opacity: 0.95;
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
     transform-origin: center;
+    object-fit: cover;
+    scale: 1.2;
 }
+
 
 .about-image:hover .portfolio-thumb {
     transform: scale(10px);
