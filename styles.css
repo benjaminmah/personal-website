@@ -1437,6 +1437,10 @@ canvas{
         font-size: 80%;
     }
 
+    .portfolio-thumb{
+        width: 300px;
+        height: 300px;
+    }
     .portfolio-thumb img{
         width: 300px;
         max-width: 100%;
