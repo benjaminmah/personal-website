@@ -1058,10 +1058,22 @@ canvas{
     position: absolute;
     z-index: 1;
     color: #fff;
-    bottom: 20px;
+    bottom: 45px;
     left: 20px;
     transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
     font-size: clamp(20px, 3vw, 30px);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+    font-family: 'Sregs Serif Display';
+    transition: all .4s;
+}
+
+.carousel-item .blurb{
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    font-size: clamp(20px, 3vw, 7px);
     text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
     font-family: 'Sregs Serif Display';
     transition: all .4s;
